@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "870828778077",
+    "project_id": "oxygo-t1-fb",
+    "storage_bucket": "oxygo-t1-fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870828778077:android:06a8ec9c7084e84edb23b4",
+        "android_client_info": {
+          "package_name": "com.example.oxygo_t1_fb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASKXAFMaLMiZfvXwVu4VkFsrBs_HL14qQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
