@@ -62,7 +62,7 @@ class SignupFragment : Fragment() {
             Toast.makeText(context, "Blank fields are not allowed.", Toast.LENGTH_SHORT).show()
         }
 
-
+        /*
         val userID = firebaseref.push().key!! // creates unique id for each child automatically
         val users = Users(userID, email, password, oxyid)
 
@@ -73,6 +73,8 @@ class SignupFragment : Fragment() {
             .addOnFailureListener{
                 Toast.makeText(context, "error ${it.message}", Toast.LENGTH_SHORT).show()
             }
+
+         */
 
 
     }
