@@ -7,7 +7,7 @@
     tools:context=".Bulletin">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/bulletinSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="5sp"
@@ -30,6 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+<<<<<<< Updated upstream
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
@@ -72,6 +73,10 @@
             android:textSize="18sp" />
     </LinearLayout>
 
+=======
+
+    </androidx.cardview.widget.CardView>
+>>>>>>> Stashed changes
 
     <EditText
         android:id="@+id/searchEditText"
@@ -90,5 +95,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.177" />
+
+    <Button
+        android:id="@+id/btnToCreate"
+        android:layout_width="130dp"
+        android:layout_height="33dp"
+        android:background="#F26419"
+        android:fontFamily="@font/kanit_medium"
+        android:text="Create Service"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:translationX="50sp"
+        android:translationY="300sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/searchEditText"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toStartOf="@+id/searchEditText"
+        app:layout_constraintTop_toTopOf="@+id/searchEditText"
+        app:layout_constraintVertical_bias="0.345" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
