@@ -33,5 +33,14 @@
         android:id="@+id/bulletin"
         android:name="com.example.oxygo_t1_fb.Bulletin"
         android:label="bulletin"
-        tools:layout="@layout/bulletin" />
+        tools:layout="@layout/bulletin" >
+        <action
+            android:id="@+id/action_bulletin_to_serviceForm"
+            app:destination="@id/serviceForm" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceForm"
+        android:name="com.example.oxygo_t1_fb.serviceForm"
+        android:label="fragment_service_form"
+        tools:layout="@layout/fragment_service_form" />
 </navigation>

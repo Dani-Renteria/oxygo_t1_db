@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:elevation="5sp"
         android:fontFamily="@font/kanit_medium"
-        android:text="Username"
+        android:text="Email"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         android:translationX="-110sp"
@@ -25,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextUsername"
+        android:id="@+id/inputEmail"
         android:layout_width="0sp"
         android:layout_height="40sp"
         android:layout_margin="20sp"
@@ -33,8 +33,9 @@
         android:elevation="5sp"
         android:ems="10"
         android:fontFamily="@font/kanit_light_italic"
-        android:hint="Enter username"
-        android:inputType="text"
+        android:hint="Enter your email"
+        android:textColorHint="@color/black"
+        android:inputType="textEmailAddress"
         android:padding="10sp"
         android:translationY="-70sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +60,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/inputPassword"
         android:layout_width="0sp"
         android:layout_height="40sp"
         android:layout_margin="20sp"
@@ -68,6 +69,7 @@
         android:ems="10"
         android:fontFamily="@font/kanit_light_italic"
         android:hint="Enter Password"
+        android:textColorHint="@color/black"
         android:inputType="textPassword"
         android:padding="10sp"
         android:translationY="10sp"

@@ -13,6 +13,7 @@ import com.example.oxygo_t1_fb.models.Users
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.auth.FirebaseAuth
+import android.content.Intent
 
 
 class SignupFragment : Fragment() {
@@ -34,26 +35,40 @@ class SignupFragment : Fragment() {
 
         binding.signUp.setOnClickListener{
             saveData()
-            findNavController().navigate(R.id.action_signupFragment_to_bulletin)
         }
         return binding.root
     }
 
     private fun saveData() {
-        val userName = binding.editTextUserName.text.toString()
-        val oxyid = binding.editTextOxyId.text.toString()
-        val password = binding.editPassword.text.toString()
+        val email = binding.enterEmail.text.toString()
+        val oxyid = binding.enterOxyId.text.toString()
+        val password = binding.enterPassword.text.toString()
 
-        if (userName.isEmpty()) binding.editTextUserName.error = "Please enter a username"
-        if (password.isEmpty()) binding.editPassword.error = "Please enter a last name"
-        if (oxyid.isEmpty()) binding.editTextOxyId.error = "Please enter your Oxy ID"
+        /*
+        if (email.isEmpty()) binding.enterEmail.error = "Please enter a username"
+        if (password.isEmpty()) binding.enterPassword.error = "Please enter a last name"
+        if (oxyid.isEmpty()) binding.enterOxyId.error = "Please enter your Oxy ID"
+        */
+
+        if (email.isNotEmpty() && oxyid.isNotEmpty() && password.isNotEmpty()){
+            firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
+                if (it.isSuccessful) {
+                    findNavController().navigate(R.id.action_signupFragment_to_homeFragment)
+                } else {
+                    Toast.makeText(context, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                }
+            }
+        }else{
+            Toast.makeText(context, "Blank fields are not allowed.", Toast.LENGTH_SHORT).show()
+        }
+
 
         val userID = firebaseref.push().key!! // creates unique id for each child automatically
-        val users = Users(userID, userName, password, oxyid)
+        val users = Users(userID, email, password, oxyid)
 
         firebaseref.child(userID).setValue(users)
             .addOnCompleteListener {
-                Toast.makeText(context, "Succesfully registered! Thank you ${userName}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Succesfully registered!", Toast.LENGTH_SHORT).show()
             }
             .addOnFailureListener{
                 Toast.makeText(context, "error ${it.message}", Toast.LENGTH_SHORT).show()
