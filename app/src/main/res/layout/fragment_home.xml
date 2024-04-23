@@ -106,23 +106,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="361dp"
-        android:layout_height="40dp"
-        android:background="#000000"
-        android:elevation="6dp"
-        android:fontFamily="@font/kanit_medium"
-        android:text="Login"
-        android:textColor="#FFFFFF"
-        android:translationY="300sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/gradHome"
         style="@style/CardView."
@@ -205,6 +188,25 @@
         app:layout_constraintEnd_toEndOf="@+id/gradHome"
         app:layout_constraintStart_toStartOf="@+id/gradHome"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#000000"
+        android:fontFamily="@font/kanit_medium"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.778" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
